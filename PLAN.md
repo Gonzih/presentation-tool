@@ -1,8 +1,12 @@
+# General
+
 * Dom is slow
   * You can always blame dom
   * Sometimes you need to address that
 
-ClojureScript
+<!--slide-->
+
+# ClojureScript
 
 * Tooling is amazing
 * Debugging story is good (I would say that it's better than clojure on jvm (at least out of the box))
@@ -13,7 +17,7 @@ ClojureScript
 * (js/debugger)
 * (comp js/console.table clj->js)
 
-ClojureScript learning curve
+# ClojureScript learning curve
 
 * 4.5 Scala engineers learned clojure script in one day
 * in few week people were writing production code without asking for help
@@ -26,7 +30,9 @@ ClojureScript learning curve
 
 * Of course partially all this because i'm working with exceptional people :)
 
-Better practice
+<!--slide-->
+
+# Better practice
 
 * Split your state more accurate
 * Think where and what you deref
@@ -34,7 +40,9 @@ Better practice
   * Once you derefed atom and it was updated everything going down the hierarchy will be updated
 * Think about reimplementing shouldComponentUpdate for fine tuting (dangerous!)
 
-Perf
+<!--slide-->
+
+# Perf
 
 * Test/benchmark on real mobile devices (cheap ones are better)
   * Iphone 4 is good example
@@ -46,7 +54,9 @@ Perf
 * Try to cut every possible microsecond (when you care about mobile, multiple by x5)
 * Profiling in Chrome is a bit unfair, too forgetful, too performant, build by actuall engineers
 
-Final Thoughts
+<!--slide-->
+
+# Final Thoughts
 
 * Web will not be smooth on mobile soon (use native, switch to canvas)
 * Javascript is almost at it best performance
@@ -59,7 +69,9 @@ Final Thoughts
 
 * Clojure spoils you, you will become very pickup about language
 
-Tooling
+<!--slide-->
+
+# Tooling
 
 * Cursive Clojure
 * Vim
