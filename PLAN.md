@@ -14,21 +14,29 @@
 * Better language (semantically)
 * Better language (syntactically)
 * Simlper language
-* (js/debugger)
+* (js* "debugger;")
 * (comp js/console.table clj->js)
+
+<!--slide-->
 
 # ClojureScript learning curve
 
 * 4.5 Scala engineers learned clojure script in one day
 * in few week people were writing production code without asking for help
+
     > there are no concepts
+
     > only parenthesis
 
+    >
+
     > lightest syntactil language
+
     > + of having FP background
+
     > some of them recently admitted that they still cannot write javascript
 
-* Of course partially all this because i'm working with exceptional people :)
+* Of course partially all this because I'm working with exceptional people :)
 
 <!--slide-->
 
