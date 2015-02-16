@@ -9,7 +9,7 @@
   (clojure.string/split s #"<!--slide-->"))
 
 (def slides (atom (split-slides (read-presentation))))
-(def current-slide (atom 0))
+(defonce current-slide (atom 0))
 
 (defn slide-component [i md]
   (when (= @current-slide i)

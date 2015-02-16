@@ -1,19 +1,19 @@
 # General
 
 * Dom is slow
-  * You can always blame dom
-  * Sometimes you need to address that
+* You can always blame dom
+* Sometimes you need to address that
 
 <!--slide-->
 
 # ClojureScript
 
 * Tooling is amazing
-* Debugging story is good (I would say that it's better than clojure on jvm (at least out of the box))
+* Debugging story is good (arguably better than clojure on jvm)
 * Sourcemaps!
 * Better language (semantically)
 * Better language (syntactically)
-* Simlper language
+* Simpler language
 * (js* "debugger;")
 * (comp js/console.table clj->js)
 
@@ -23,20 +23,17 @@
 
 * 4.5 Scala engineers learned clojure script in one day
 * in few week people were writing production code without asking for help
+* Partially it's because people had FP experience
+* And partially it's this because I'm working with exceptional people :)
 
-    > there are no concepts
+* Quotes:
 
-    > only parenthesis
+    > there are no concepts, only parenthesis
 
     >
 
-    > lightest syntactil language
-
-    > + of having FP background
-
     > some of them recently admitted that they still cannot write javascript
-
-* Of course partially all this because I'm working with exceptional people :)
+    > but they are fluent in clojurescript
 
 <!--slide-->
 
@@ -45,22 +42,22 @@
 * Split your state more accurate
 * Think where and what you deref
   * If you can move some state and isolate it inside individual component - do that
-  * Once you derefed atom and it was updated everything going down the hierarchy will be updated
-* Think about reimplementing shouldComponentUpdate for fine tuting (dangerous!)
+  * Once you derefed atom and it was updated everything down the hierarchy will be updated
+  * deref == force update
 
 <!--slide-->
 
-# Perf
+# Performance analysis
 
-* Test/benchmark on real mobile devices (cheap ones are better)
-  * Iphone 4 is good example
+* Test/benchmark on real mobile devices (cheaper device is better)
+  * Iphone 4 is a good example
 * React.addons.Perf is your friend (especially .printWasted)
 * iOS remote debugging is hard
 * Chrome remote debugging is a dream
-* Profiling might be hard because of lazy collections (use doall for profiling)
+* Profiling might be hard because of lazy collections
 * Pure profiling in chrome is hard due to internal react stuff
 * Try to cut every possible microsecond (when you care about mobile, multiple by x5)
-* Profiling in Chrome is a bit unfair, too forgetful, too performant, build by actuall engineers
+* Profiling in Chrome is a bit unfair, too forgetful
 
 <!--slide-->
 
