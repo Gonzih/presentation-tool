@@ -9,7 +9,6 @@
           nodes (.querySelectorAll dom-node "pre code")
           ]
       (doseq [n (array-seq nodes)]
-        (prn n)
         (js/hljs.highlightBlock n))))
 
 (def slides (atom (read-presentation)))
@@ -54,7 +53,11 @@
           (let [code (.-keyCode e)]
             (case code
               32 (next-slide!)
+              34 (next-slide!)
               39 (next-slide!)
+              40 (next-slide!)
+              33 (prev-slide!)
+              38 (prev-slide!)
               37 (prev-slide!)
               nil)))))
 
