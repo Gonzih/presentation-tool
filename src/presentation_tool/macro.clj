@@ -10,4 +10,4 @@
     []
     (map md-to-html-string
          (split-slides
-           (slurp "PLAN.md")))))
+           (slurp "PRESENTATION.md")))))

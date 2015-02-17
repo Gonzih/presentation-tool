@@ -1,11 +1,3 @@
-# General
-
-* Dom is slow
-* You can always blame dom
-* Sometimes you need to address that
-
-<!--slide-->
-
 # ClojureScript
 
 * Tooling is amazing
@@ -28,12 +20,10 @@
 
 * Quotes:
 
-    > there are no concepts, only parenthesis
+> there are no concepts, only parenthesis
 
-    >
-
-    > some of them recently admitted that they still cannot write javascript
-    > but they are fluent in clojurescript
+> some of them recently admitted that they still cannot write javascript
+> but they are fluent in clojurescript
 
 <!--slide-->
 
@@ -81,3 +71,20 @@
 * Cursive Clojure
 * Vim
 * Evil emacs
+
+<!--slide-->
+
+# General
+
+* Dom is slow
+* You can always blame dom
+* Sometimes you need to address that
+
+
+<!--slide-->
+
+# Links
+
+* [ClojureScript micro optimizations](http://www.wagjo.com/benchmark-cljs/)
+* [Why mobile web apps are slow (2013)](http://sealedabstract.com/rants/why-mobile-web-apps-are-slow/)
+* [React Perf](http://facebook.github.io/react/docs/perf.html)
