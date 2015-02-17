@@ -1,31 +1,38 @@
 (ns ^:figwheel-always presentation-tool.core
   (:require-macros [presentation-tool.macro :refer [read-presentation]])
-  (:require [reagent.core :as reagent :refer [atom]]
-            [clojure.string]))
+  (:require [reagent.core :as reagent :refer [atom]]))
 
 (enable-console-print!)
 
-(defn split-slides [s]
-  (clojure.string/split s #"<!--slide-->"))
+(defn highlight-code [this]
+    (let [dom-node (reagent/dom-node this)
+          nodes (.querySelectorAll dom-node "pre code")
+          ]
+      (doseq [n (array-seq nodes)]
+        (prn n)
+        (js/hljs.highlightBlock n))))
 
-(def slides (atom (split-slides (read-presentation))))
+(def slides (atom (read-presentation)))
 (defonce current-slide (atom 0))
 
-(defn slide-component [i md]
+(defn slide-component [i html]
   (when (= @current-slide i)
-    ^{:key (hash md)}
+    ^{:key (hash html)}
     [:div {:dangerouslySetInnerHTML
-           {:__html
-            (js/markdown.toHTML md)}}]))
+           {:__html html}}]))
 
-(defn root-component []
-  [:div
-   (doall (map-indexed slide-component @slides))
-   [:p
-    {:style {:position :absolute
-             :left 0
-             :top 0}}
-    (str (inc @current-slide) " / " (count @slides))]])
+(def root-component
+  (with-meta
+    (fn []
+      [:div
+       (doall (map-indexed slide-component @slides))
+       [:p
+        {:style {:position :absolute
+                 :left 0
+                 :top 0}}
+        (str (inc @current-slide) " / " (count @slides))]])
+    {:component-did-update highlight-code
+     :component-did-mount  highlight-code}))
 
 (defn main []
   (reagent/render [root-component]

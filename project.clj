@@ -8,7 +8,8 @@
                  [org.clojure/clojurescript "0.0-2760"]
                  [figwheel "0.2.3-SNAPSHOT"]
                  [org.clojure/core.async "0.1.346.0-17112a-alpha"]
-                 [reagent "0.5.0-alpha3"]]
+                 [reagent "0.5.0-alpha3"]
+                 [markdown-clj "0.9.62"]]
 
   :plugins [[lein-cljsbuild "1.0.4"]
             [lein-figwheel "0.2.3-SNAPSHOT"]]
