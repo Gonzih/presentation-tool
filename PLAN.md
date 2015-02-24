@@ -6,8 +6,8 @@
 * Better language (semantically)
 * Better language (syntactically)
 * Simpler language
-* (js* "debugger;")
-* (comp js/console.table clj->js)
+* (js* "debugger;") # ?
+* (comp js/console.table clj->js) # ?
 
 <!--slide-->
 
@@ -41,13 +41,16 @@
 
 * Test/benchmark on real mobile devices (cheaper device is better)
   * Iphone 4 is a good example
-* React.addons.Perf is your friend (especially .printWasted)
+* Develop live via figwheel on your mobile
+* Use memoize
+* Be aggressive with your caching strategy for pure functions/components
 * iOS remote debugging is hard
 * Chrome remote debugging is a dream
 * Profiling might be hard because of lazy collections
 * Pure profiling in chrome is hard due to internal react stuff
 * Try to cut every possible microsecond (when you care about mobile, multiple by x5)
-* Profiling in Chrome is a bit unfair, too forgetful
+* Profiling in Chrome is a bit unfair, too forgiving
+* React.addons.Perf is your friend (especially .printWasted)
 
 <!--slide-->
 
@@ -62,7 +65,13 @@
 * React is faster with immutable data structures
 * Clojure is a language designed with immutability
 
-* Clojure spoils you, you will become very pickup about language
+* Clojure spoils you, you will become very picky about language
+
+# js libs inspired by cljs
+
+* https://github.com/ubolonton/js-csp
+* http://facebook.github.io/immutable-js/docs/#/
+* https://github.com/dustingetz/react-cursor
 
 <!--slide-->
 
@@ -79,7 +88,6 @@
 * Dom is slow
 * You can always blame dom
 * Sometimes you need to address that
-
 
 <!--slide-->
 
