@@ -48,7 +48,7 @@
 
 # Where are we so far?
 
-* 4k cljs loc single page
+* 4k cljs loc on a single page in 5k loc rails app
 
 ```bash
 wc -l {src,test}/**/*.clj? | tail -n 1
