@@ -511,4 +511,4 @@ return chan;
 })()
 ;
 
-//# sourceMappingURL=channels.js.map?rel=1425470283355
+//# sourceMappingURL=channels.js.map?rel=1425470437683
