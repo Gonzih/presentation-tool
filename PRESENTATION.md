@@ -1,17 +1,31 @@
-# Max Gonzih
+## Max Gonzih
 
 ##### [gonzih.me](http://gonzih.me)
-##### [github.com/Gonzih](github.com/Gonzih)
-##### [@Gonzih](twitter.com/Gonzit)
+##### [github.com/Gonzih](http://github.com/Gonzih)
+##### [@Gonzih](http://twitter.com/Gonzit)
 
 # Reagent in production
 
+### ![](http://static.vakantiediscounter.nl/atomic/images/hero-circle-header.png)
+## Elmar Reizen B.V.
+##### [vakantiediscounter.nl](http://www.vakantiediscounter.nl/)
+
+
 <!--slide-->
 
-# Why we decided to migrate
+# Why we decided to migrate?
 
-* "Legacy" angular code without motivated maintainer
-* React hype
+### "Legacy" angular code without motivated maintainer
+
+### ![](img/angular-logo.jpg)
+
+<!--slide-->
+
+# Why we decided to migrate?
+
+### We liked simplicity of React
+
+### ![](img/react-logo.png)
 
 <!--slide-->
 
@@ -21,9 +35,11 @@
 * Better language syntactically
 * React feels limited by JavaScript
 
+### ![](img/clj-logo.png)
+
 <!--slide-->
 
-# Adoption
+# Learning curve
 
 * 4.5 Scala engineers learned clojure script in one day
 * in few week people were writing production code without asking for help
@@ -37,7 +53,7 @@
 
 <!--slide-->
 
-# Clojure is esasy
+# Clojure is easy
 
 > there are no concepts, only parenthesis
 
@@ -69,6 +85,11 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 ```
 
 * Easy server side rendering via v8 in ruby
+*
+<!--slide-->
+
+# Where are we so far?
+
 * Happy customers
 
 <!--slide-->
@@ -77,7 +98,7 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 
 * vim + fireplace.vim
 * vim + tmux + tslime2
-* cursive clojure
+* la clojure
 
 <!--slide-->
 
@@ -87,6 +108,8 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 * CLJS life cycle is outside of rails pipeline
 * Different optimization modes for dev/production
 * Environment specific macro
+
+<!--slide-->
 
 # Development
 
