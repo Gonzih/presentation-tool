@@ -1189,4 +1189,4 @@ reagent.ratom.make_wrapper = (function make_wrapper(value,callback_fn,args){
 return (new reagent.ratom.Wrapper(value,(new reagent.impl.util.partial_ifn(callback_fn,args,null)),false,null));
 });
 
-//# sourceMappingURL=ratom.js.map?rel=1425470423320
+//# sourceMappingURL=ratom.js.map?rel=1425473456778

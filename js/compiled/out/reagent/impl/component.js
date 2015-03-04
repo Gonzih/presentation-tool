@@ -453,4 +453,4 @@ return reagent.impl.component.as_element.call(null,new cljs.core.PersistentVecto
 }), "displayName": "react-wrapper"});
 });
 
-//# sourceMappingURL=component.js.map?rel=1425470422690
+//# sourceMappingURL=component.js.map?rel=1425473456137
