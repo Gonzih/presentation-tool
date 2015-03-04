@@ -22,8 +22,7 @@
 
 > there are no concepts, only parenthesis
 
-> some of them recently admitted that they still cannot write javascript
-> but they are fluent in clojurescript
+> some of them recently admitted that they still cannot write javascript, but they are fluent in clojurescript
 
 <!--slide-->
 
@@ -43,6 +42,7 @@
   * Iphone 4 is a good example
 * Develop live via figwheel on your mobile
 * Use memoize
+  * It will skip component rebuilding on parent updates
 * Be aggressive with your caching strategy for pure functions/components
 * iOS remote debugging is hard
 * Chrome remote debugging is a dream
