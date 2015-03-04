@@ -1,3 +1,13 @@
+# Max Gonzih
+
+##### [gonzih.me](http://gonzih.me)
+##### [github.com/Gonzih](github.com/Gonzih)
+##### [@Gonzih](twitter.com/Gonzit)
+
+# Reagent in production
+
+<!--slide-->
+
 # Why we decided to migrate
 
 * "Legacy" angular code without motivated maintainer
@@ -77,6 +87,20 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 * CLJS life cycle is outside of rails pipeline
 * Different optimization modes for dev/production
 * Environment specific macro
+
+# Development
+
+* Advanced compilation is not so scary once you understand what is going on underneath
+* Writing extern files is easy
+
+<!--slide-->
+
+# Testing
+
+* cemerick/clojurescript.test
+* focus on function testing
+* no tests for components (feels like view testing)
+* would be better to use cljs.test
 
 ```clojure
 (in-production
@@ -205,3 +229,11 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 * Think about your updates
 * ClojureScript overhead is a least thing that you should be worried about
 * ClojureScript can do performance tricks (transducers, transients, local mutations, arrays)
+
+<!--slide-->
+
+# Thanks!
+
+##### [gonzih.me](http://gonzih.me)
+##### [github.com/Gonzih](github.com/Gonzih)
+##### [@Gonzih](twitter.com/Gonzit)
