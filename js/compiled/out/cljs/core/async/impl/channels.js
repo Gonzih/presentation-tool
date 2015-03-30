@@ -511,4 +511,4 @@ return cljs$core$async$impl$channels$chan;
 })()
 ;
 
-//# sourceMappingURL=channels.js.map?rel=1427723160590
+//# sourceMappingURL=channels.js.map?rel=1427724781613
