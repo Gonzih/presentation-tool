@@ -55,25 +55,19 @@
 
 # Clojure is easy
 
-> There are no concepts, only parenthesis
+> > There are no concepts, only parenthesis
 
 <!--slide-->
 
 # Clojure is easy
 
-> I still cannot write javascript, but I'm fluent in clojurescript
+> > I still cannot write javascript, but I'm fluent in clojurescript
 
 <!--slide-->
 
 # Why reagent and not om?
 * Distributed state
-<!--slide-->
-
-# Why reagent and not om?
 * Beauty in simplicity
-<!--slide-->
-
-# Why reagent and not om?
 * Similar level of flexibility
 <!--slide-->
 
@@ -93,13 +87,7 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 
 # Where are we so far?
 
-* Easy server side rendering via v8 in ruby
-
-<!--slide-->
-
-# Where are we so far?
-
-* Happy customers
+* Server side rendering via v8 in ruby
 
 <!--slide-->
 
@@ -130,7 +118,7 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 
 <!--slide-->
 
-# Compiler pain
+# Advanced optimization mode
 
 * Advanced compilation is not so scary once you understand what is going on underneath
 * Writing extern files is easy
@@ -140,7 +128,7 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 # Testing
 
 * ~~cemerick/clojurescript.test~~ cljs.test
-* focus on function testing
+* focus on functional testing
 * no tests for components (feels like view testing)
 
 <!--slide-->
