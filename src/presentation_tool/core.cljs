@@ -6,8 +6,7 @@
 
 (defn highlight-code [this]
     (let [dom-node (reagent/dom-node this)
-          nodes (.querySelectorAll dom-node "pre code")
-          ]
+          nodes (.querySelectorAll dom-node "pre code")]
       (doseq [n (array-seq nodes)]
         (js/hljs.highlightBlock n))))
 

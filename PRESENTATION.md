@@ -89,6 +89,14 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 
 * Server side rendering via v8 in ruby
 
+```ruby
+cxt = V8::Context.new
+cxt.eval(setup_js)
+cxt.eval(read_file)
+cxt.eval(init_data)
+cxt.eval(render_to_string)
+```
+
 <!--slide-->
 
 # Development
@@ -106,6 +114,10 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 
 # Development
 * Different optimization modes for dev/production
+
+* none for development
+* simple for server-side rendering
+* advanced for production
 <!--slide-->
 
 # Development
@@ -122,6 +134,10 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 
 * Advanced compilation is not so scary once you understand what is going on underneath
 * Writing extern files is easy
+```javascript
+var window = {};
+window._gaq = function(arg) {};
+```
 
 <!--slide-->
 
@@ -247,6 +263,24 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 
 <!--slide-->
 
+# Optimizing
+
+* Try to make your state changes atomic
+
+```clojure
+(reset! state-one :a)
+(reset! state-two :b)
+```
+
+should become (using cursors)
+
+```clojure
+(reset! main-state {:state-one :a
+                    :state-two :b})
+```
+
+<!--slide-->
+
 # Final thoughts
 * ClojureScript overhead is a least thing that you should be worried about
 * ClojureScript can do performance tricks (transducers, transients, local mutations, arrays)
@@ -262,4 +296,4 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 
 ##### [gonzih.me](http://gonzih.me)
 ##### [github.com/Gonzih](github.com/Gonzih)
-##### [@Gonzih](twitter.com/Gonzih)
+#### [@Gonzih](twitter.com/Gonzih)
