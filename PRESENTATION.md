@@ -274,4 +274,4 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 
 ##### [gonzih.me](http://gonzih.me)
 ##### [github.com/Gonzih](github.com/Gonzih)
-##### [@Gonzih](twitter.com/Gonzit)
+##### [@Gonzih](twitter.com/Gonzih)
