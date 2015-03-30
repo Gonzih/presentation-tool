@@ -5,14 +5,14 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :dependencies [[org.clojure/clojure "1.6.0"]
-                 [org.clojure/clojurescript "0.0-2760"]
-                 [figwheel "0.2.3-SNAPSHOT"]
+                 [org.clojure/clojurescript "0.0-3153"]
+                 [figwheel "0.2.5"]
                  [org.clojure/core.async "0.1.346.0-17112a-alpha"]
                  [reagent "0.5.0-alpha3"]
                  [markdown-clj "0.9.62"]]
 
   :plugins [[lein-cljsbuild "1.0.4"]
-            [lein-figwheel "0.2.3-SNAPSHOT"]]
+            [lein-figwheel "0.2.5"]]
 
   :source-paths ["src"]
 
@@ -57,7 +57,7 @@
              ;; :open-file-command "myfile-opener"
 
              ;; if you want to disable the REPL
-             ;; :repl false
+             :repl false
 
              ;; to configure a different figwheel logfile path
              ;; :server-logfile "tmp/logs/figwheel-logfile.log"

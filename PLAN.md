@@ -20,9 +20,9 @@
 
 * Quotes:
 
-> there are no concepts, only parenthesis
+> > there are no concepts, only parenthesis
 
-> some of them recently admitted that they still cannot write javascript, but they are fluent in clojurescript
+> > some of them recently admitted that they still cannot write javascript, but they are fluent in clojurescript
 
 <!--slide-->
 

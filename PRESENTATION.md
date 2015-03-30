@@ -31,9 +31,9 @@
 
 # Why ClojureScript?
 
+* React feels limited by JavaScript
 * Better language semantically
 * Better language syntactically
-* React feels limited by JavaScript
 
 ### ![](img/clj-logo.png)
 
@@ -42,7 +42,7 @@
 # Learning curve
 
 * 4.5 Scala engineers learned clojure script in one day
-* in few week people were writing production code without asking for help
+* In a few week people were writing production code without asking for help
 
 <!--slide-->
 
@@ -55,21 +55,26 @@
 
 # Clojure is easy
 
-> there are no concepts, only parenthesis
+> There are no concepts, only parenthesis
 
 <!--slide-->
 
-# Clojure is simpler
+# Clojure is easy
 
-> some of engineers recently admitted that they still cannot write javascript, but they are fluent in clojurescript
+> I still cannot write javascript, but I'm fluent in clojurescript
 
 <!--slide-->
 
 # Why reagent and not om?
-
 * Distributed state
-* Simplicity
+<!--slide-->
 
+# Why reagent and not om?
+* Beauty in simplicity
+<!--slide-->
+
+# Why reagent and not om?
+* Similar level of flexibility
 <!--slide-->
 
 # Where are we so far?
@@ -84,8 +89,12 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 > 4997 total
 ```
 
+<!--slide-->
+
+# Where are we so far?
+
 * Easy server side rendering via v8 in ruby
-*
+
 <!--slide-->
 
 # Where are we so far?
@@ -103,15 +112,25 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 <!--slide-->
 
 # Development
-
 * Rails integration is not hard
 * CLJS life cycle is outside of rails pipeline
-* Different optimization modes for dev/production
-* Environment specific macro
-
 <!--slide-->
 
 # Development
+* Different optimization modes for dev/production
+<!--slide-->
+
+# Development
+* Environment specific macro
+
+```clojure
+(in-production
+  (do-some-additional-call))
+```
+
+<!--slide-->
+
+# Compiler pain
 
 * Advanced compilation is not so scary once you understand what is going on underneath
 * Writing extern files is easy
@@ -120,15 +139,9 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 
 # Testing
 
-* cemerick/clojurescript.test
+* ~~cemerick/clojurescript.test~~ cljs.test
 * focus on function testing
 * no tests for components (feels like view testing)
-* would be better to use cljs.test
-
-```clojure
-(in-production
-  (do-some-additional-call))
-```
 
 <!--slide-->
 
@@ -247,11 +260,13 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 <!--slide-->
 
 # Final thoughts
-
-* Think how to split your state
-* Think about your updates
 * ClojureScript overhead is a least thing that you should be worried about
 * ClojureScript can do performance tricks (transducers, transients, local mutations, arrays)
+<!--slide-->
+
+# Final thoughts
+* Think how to split your state
+* Think about your updates
 
 <!--slide-->
 
