@@ -11,8 +11,10 @@
       (doseq [n (array-seq nodes)]
         (js/hljs.highlightBlock n))))
 
-(def slides (atom (read-presentation)))
+(defonce slides (atom []))
 (defonce current-slide (atom 0))
+
+(reset! slides (read-presentation))
 
 (defn slide-component [i html]
   (when (= @current-slide i)

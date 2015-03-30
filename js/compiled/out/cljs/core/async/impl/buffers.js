@@ -1,15 +1,15 @@
-// Compiled by ClojureScript 0.0-2760 {}
+// Compiled by ClojureScript 0.0-3153 {}
 goog.provide('cljs.core.async.impl.buffers');
 goog.require('cljs.core');
 goog.require('cljs.core.async.impl.protocols');
-cljs.core.async.impl.buffers.acopy = (function acopy(src,src_start,dest,dest_start,len){
+cljs.core.async.impl.buffers.acopy = (function cljs$core$async$impl$buffers$acopy(src,src_start,dest,dest_start,len){
 var cnt = (0);
 while(true){
 if((cnt < len)){
 (dest[(dest_start + cnt)] = (src[(src_start + cnt)]));
 
-var G__22468 = (cnt + (1));
-cnt = G__22468;
+var G__16860 = (cnt + (1));
+cnt = G__16860;
 continue;
 } else {
 return null;
@@ -108,18 +108,18 @@ return null;
 cljs.core.async.impl.buffers.RingBuffer.prototype.cleanup = (function (keep_QMARK_){
 var self__ = this;
 var this$ = this;
-var n__4888__auto__ = self__.length;
+var n__5201__auto__ = self__.length;
 var x = (0);
 while(true){
-if((x < n__4888__auto__)){
-var v_22469 = this$.pop();
-if(keep_QMARK_.call(null,v_22469)){
-this$.unshift(v_22469);
+if((x < n__5201__auto__)){
+var v_16861 = this$.pop();
+if(keep_QMARK_.call(null,v_16861)){
+this$.unshift(v_16861);
 } else {
 }
 
-var G__22470 = (x + (1));
-x = G__22470;
+var G__16862 = (x + (1));
+x = G__16862;
 continue;
 } else {
 return null;
@@ -132,15 +132,15 @@ cljs.core.async.impl.buffers.RingBuffer.cljs$lang$type = true;
 
 cljs.core.async.impl.buffers.RingBuffer.cljs$lang$ctorStr = "cljs.core.async.impl.buffers/RingBuffer";
 
-cljs.core.async.impl.buffers.RingBuffer.cljs$lang$ctorPrWriter = (function (this__4588__auto__,writer__4589__auto__,opt__4590__auto__){
-return cljs.core._write.call(null,writer__4589__auto__,"cljs.core.async.impl.buffers/RingBuffer");
+cljs.core.async.impl.buffers.RingBuffer.cljs$lang$ctorPrWriter = (function (this__4895__auto__,writer__4896__auto__,opt__4897__auto__){
+return cljs.core._write.call(null,writer__4896__auto__,"cljs.core.async.impl.buffers/RingBuffer");
 });
 
-cljs.core.async.impl.buffers.__GT_RingBuffer = (function __GT_RingBuffer(head,tail,length,arr){
+cljs.core.async.impl.buffers.__GT_RingBuffer = (function cljs$core$async$impl$buffers$__GT_RingBuffer(head,tail,length,arr){
 return (new cljs.core.async.impl.buffers.RingBuffer(head,tail,length,arr));
 });
 
-cljs.core.async.impl.buffers.ring_buffer = (function ring_buffer(n){
+cljs.core.async.impl.buffers.ring_buffer = (function cljs$core$async$impl$buffers$ring_buffer(n){
 if((n > (0))){
 } else {
 throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str("Can't create a ring buffer of size 0"),cljs.core.str("\n"),cljs.core.str(cljs.core.pr_str.call(null,cljs.core.list(new cljs.core.Symbol(null,">",">",1085014381,null),new cljs.core.Symbol(null,"n","n",-2092305744,null),(0))))].join('')));
@@ -190,15 +190,15 @@ cljs.core.async.impl.buffers.FixedBuffer.cljs$lang$type = true;
 
 cljs.core.async.impl.buffers.FixedBuffer.cljs$lang$ctorStr = "cljs.core.async.impl.buffers/FixedBuffer";
 
-cljs.core.async.impl.buffers.FixedBuffer.cljs$lang$ctorPrWriter = (function (this__4588__auto__,writer__4589__auto__,opt__4590__auto__){
-return cljs.core._write.call(null,writer__4589__auto__,"cljs.core.async.impl.buffers/FixedBuffer");
+cljs.core.async.impl.buffers.FixedBuffer.cljs$lang$ctorPrWriter = (function (this__4895__auto__,writer__4896__auto__,opt__4897__auto__){
+return cljs.core._write.call(null,writer__4896__auto__,"cljs.core.async.impl.buffers/FixedBuffer");
 });
 
-cljs.core.async.impl.buffers.__GT_FixedBuffer = (function __GT_FixedBuffer(buf,n){
+cljs.core.async.impl.buffers.__GT_FixedBuffer = (function cljs$core$async$impl$buffers$__GT_FixedBuffer(buf,n){
 return (new cljs.core.async.impl.buffers.FixedBuffer(buf,n));
 });
 
-cljs.core.async.impl.buffers.fixed_buffer = (function fixed_buffer(n){
+cljs.core.async.impl.buffers.fixed_buffer = (function cljs$core$async$impl$buffers$fixed_buffer(n){
 return (new cljs.core.async.impl.buffers.FixedBuffer(cljs.core.async.impl.buffers.ring_buffer.call(null,n),n));
 });
 
@@ -248,15 +248,15 @@ cljs.core.async.impl.buffers.DroppingBuffer.cljs$lang$type = true;
 
 cljs.core.async.impl.buffers.DroppingBuffer.cljs$lang$ctorStr = "cljs.core.async.impl.buffers/DroppingBuffer";
 
-cljs.core.async.impl.buffers.DroppingBuffer.cljs$lang$ctorPrWriter = (function (this__4588__auto__,writer__4589__auto__,opt__4590__auto__){
-return cljs.core._write.call(null,writer__4589__auto__,"cljs.core.async.impl.buffers/DroppingBuffer");
+cljs.core.async.impl.buffers.DroppingBuffer.cljs$lang$ctorPrWriter = (function (this__4895__auto__,writer__4896__auto__,opt__4897__auto__){
+return cljs.core._write.call(null,writer__4896__auto__,"cljs.core.async.impl.buffers/DroppingBuffer");
 });
 
-cljs.core.async.impl.buffers.__GT_DroppingBuffer = (function __GT_DroppingBuffer(buf,n){
+cljs.core.async.impl.buffers.__GT_DroppingBuffer = (function cljs$core$async$impl$buffers$__GT_DroppingBuffer(buf,n){
 return (new cljs.core.async.impl.buffers.DroppingBuffer(buf,n));
 });
 
-cljs.core.async.impl.buffers.dropping_buffer = (function dropping_buffer(n){
+cljs.core.async.impl.buffers.dropping_buffer = (function cljs$core$async$impl$buffers$dropping_buffer(n){
 return (new cljs.core.async.impl.buffers.DroppingBuffer(cljs.core.async.impl.buffers.ring_buffer.call(null,n),n));
 });
 
@@ -308,16 +308,16 @@ cljs.core.async.impl.buffers.SlidingBuffer.cljs$lang$type = true;
 
 cljs.core.async.impl.buffers.SlidingBuffer.cljs$lang$ctorStr = "cljs.core.async.impl.buffers/SlidingBuffer";
 
-cljs.core.async.impl.buffers.SlidingBuffer.cljs$lang$ctorPrWriter = (function (this__4588__auto__,writer__4589__auto__,opt__4590__auto__){
-return cljs.core._write.call(null,writer__4589__auto__,"cljs.core.async.impl.buffers/SlidingBuffer");
+cljs.core.async.impl.buffers.SlidingBuffer.cljs$lang$ctorPrWriter = (function (this__4895__auto__,writer__4896__auto__,opt__4897__auto__){
+return cljs.core._write.call(null,writer__4896__auto__,"cljs.core.async.impl.buffers/SlidingBuffer");
 });
 
-cljs.core.async.impl.buffers.__GT_SlidingBuffer = (function __GT_SlidingBuffer(buf,n){
+cljs.core.async.impl.buffers.__GT_SlidingBuffer = (function cljs$core$async$impl$buffers$__GT_SlidingBuffer(buf,n){
 return (new cljs.core.async.impl.buffers.SlidingBuffer(buf,n));
 });
 
-cljs.core.async.impl.buffers.sliding_buffer = (function sliding_buffer(n){
+cljs.core.async.impl.buffers.sliding_buffer = (function cljs$core$async$impl$buffers$sliding_buffer(n){
 return (new cljs.core.async.impl.buffers.SlidingBuffer(cljs.core.async.impl.buffers.ring_buffer.call(null,n),n));
 });
 
-//# sourceMappingURL=buffers.js.map?rel=1425480885308
+//# sourceMappingURL=buffers.js.map?rel=1427723160452

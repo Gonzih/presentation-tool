@@ -93,40 +93,48 @@
                  (recur))))
     (fn [msg-hist] (put! ch msg-hist) msg-hist)))
 
-(defn truncate-stack-trace [stack-str]
-  (string/join "\n" (take-while #(not (re-matches #".*eval_javascript_STAR__STAR_.*" %))
-                                (string/split-lines stack-str))))
+#_(defn error-test2 []
+  js/joe)
 
-(defn eval-javascript** [code result-handler]
-  (try
-    (binding [*print-fn* (fn [& args]
-                           (-> args
-                             console-print
-                             figwheel-repl-print))
-              *print-newline* false]
-      (result-handler
-       {:status :success,
-        :value (str (js* "eval(~{code})"))}))
-    (catch js/Error e
-      (result-handler
-       {:status :exception
-        :value (pr-str e)
-        :stacktrace (if (.hasOwnProperty e "stack")
-                      (truncate-stack-trace (.-stack e)) 
-                      "No stacktrace available.")}))
+#_(defn error-test3 []
+  (error-test2))
+
+#_(defn error-test []
+   (error-test3))
+
+(defn truncate-stack-trace [stack-str]
+  (take-while #(not (re-matches #".*eval_javascript_STAR__STAR_.*" %))
+              (string/split-lines stack-str)))
+
+(let [base-path (string/replace (.-basePath js/goog) #"(.*)goog/" #(str %2))]
+  (defn eval-javascript** [code result-handler]
+    (try
+      (binding [*print-fn* (fn [& args]
+                             (-> args
+                               console-print
+                               figwheel-repl-print))
+                *print-newline* false]
+        (result-handler
+         {:status :success,
+          :value (str (js* "eval(~{code})"))}))
+      (catch js/Error e
+        (result-handler
+         {:status :exception
+          :value (pr-str e)
+          :stacktrace (string/join "\n" (truncate-stack-trace (.-stack e)))
+          :base-path base-path }))
     (catch :default e
       (result-handler
        {:status :exception
         :value (pr-str e)
-        :stacktrace "No stacktrace available."}))))
+        :stacktrace "No stacktrace available."})))))
 
 (defn ensure-cljs-user
   "The REPL can disconnect and reconnect lets ensure cljs.user exists at least."
   []
-  (when-not js/cljs  
-    (set! js/cljs #js {}))
-  (when-not (.-user js/cljs)
-    (set! (.-user js/cljs) #js {})))
+  ;; this should be included in the REPL
+  (when-not js/cljs.user
+    (set! js/cljs.user #js {})))
 
 (defn repl-plugin [{:keys [build-id] :as opts}]
   (fn [[{:keys [msg-name] :as msg} & _]]
@@ -158,7 +166,9 @@
     (go
      (cond
       (reload-file-state? msg-names opts)
-      (<! (heads-up/flash-loaded))
+      (if (:autoload opts)
+        (<! (heads-up/flash-loaded))
+        (<! (heads-up/clear)))
 
       (compile-refail-state? msg-names)
       (do
@@ -255,6 +265,8 @@
    :on-compile-fail default-on-compile-fail
    :on-compile-warning default-on-compile-warning
 
+   :autoload true
+   
    :debug false
    
    :heads-up-display true
@@ -280,6 +292,9 @@
                                   :file-reloader-plugin
                                   :comp-fail-warning-plugin
                                   :repl-plugin])
+               base)
+        base (if (false? (:autoload system-options))
+               (dissoc base :file-reloader-plugin)
                base)]
     (if (and (:heads-up-display system-options)
              (utils/html-env?))
