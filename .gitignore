@@ -10,3 +10,4 @@ pom.xml
 .lein-repl-history
 .lein-plugins/
 resources/public/js/compiled/
+deploy/
