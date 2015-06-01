@@ -11,7 +11,7 @@
 
 <!--slide-->
 
-# Why we decided to migrate?
+# Why did we decide to migrate?
 
 ### "Legacy" angular code without motivated maintainer
 
@@ -19,9 +19,9 @@
 
 <!--slide-->
 
-# Why we decided to migrate?
+# Why did we decide to migrate?
 
-### We liked ideas and simplicity of React.js
+### We like ideas and simplicity of React.js
 
 ### ![](img/react-logo.png)
 
@@ -41,25 +41,14 @@
 
 * 4.5 Scala engineers learned clojure script in one day
 * Initial introduction was done in the form of workshop
-* In a few week people were writing production code without asking for help
+* In a few weeks people were writing production code without asking for help
 ### ![](img/flappy-demo.jpg)
-
-<!--slide-->
-
-# That was fast...
-
-* Prior FP experience
-* Partially because I'm working with exceptional people :)
 
 <!--slide-->
 
 # Clojure is easy
 
 > > There are no concepts, only parenthesis
-
-<!--slide-->
-
-# Clojure is easy
 
 > > I still cannot write javascript, but I'm fluent in clojurescript
 
@@ -69,20 +58,6 @@
 * Distributed state
 * Beauty in simplicity
 * Similar level of flexibility
-
-<!--slide-->
-
-# Where are we so far?
-
-* 5k cljs LOC on top of 5k LOC rails app
-
-```bash
-wc -l {src,test}/**/*.clj? | tail -n 1
-> 5185 total
-
-wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
-> 5529 total
-```
 
 <!--slide-->
 
@@ -282,6 +257,20 @@ should become (using cursors)
 ```clojure
 (reset! main-state {:state-one :a
                     :state-two :b})
+```
+
+<!--slide-->
+
+# Where are we so far?
+
+* 5k cljs LOC on top of 5k LOC rails app
+
+```bash
+wc -l {src,test}/**/*.clj? | tail -n 1
+> 5185 total
+
+wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
+> 5529 total
 ```
 
 <!--slide-->
