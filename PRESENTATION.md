@@ -1,8 +1,6 @@
 ## Max Gonzih
 
 ##### [gonzih.me](http://gonzih.me)
-##### [github.com/Gonzih](http://github.com/Gonzih)
-##### [@Gonzih](http://twitter.com/Gonzit)
 
 # Reagent in production
 
@@ -23,7 +21,7 @@
 
 # Why we decided to migrate?
 
-### We liked simplicity of React
+### We liked ideas and simplicity of React.js
 
 ### ![](img/react-logo.png)
 
@@ -35,7 +33,7 @@
 * Better language semantically
 * Better language syntactically
 
-### ![](img/clj-logo.png)
+### ![](img/cljs-logo.png)
 
 <!--slide-->
 
@@ -65,29 +63,30 @@
 
 <!--slide-->
 
-# Why reagent and not om?
+# Why Reagent and not Om?
 * Distributed state
 * Beauty in simplicity
 * Similar level of flexibility
+
 <!--slide-->
 
 # Where are we so far?
 
-* 4k cljs loc on a single page in 5k loc rails app
+* 5k cljs LOC on top of 5k LOC rails app
 
 ```bash
 wc -l {src,test}/**/*.clj? | tail -n 1
-> 4200 total
+> 5185 total
 
 wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
-> 4997 total
+> 5529 total
 ```
 
 <!--slide-->
 
 # Where are we so far?
 
-* Server side rendering via v8 in ruby
+* Server side rendering via V8 in ruby
 
 ```ruby
 cxt = V8::Context.new
@@ -97,34 +96,38 @@ cxt.eval(init_data)
 cxt.eval(render_to_string)
 ```
 
-<!--slide-->
-
-# Development
-
-* vim + fireplace.vim
-* vim + tmux + tslime2
-* la clojure
+Which is:
+* Memory hungry
+* Fast enough
 
 <!--slide-->
 
 # Development
+
+* vim + fireplace.vim/tmux
+* Intellij with clojure plugin
+
+<!--slide-->
+
+# Development
+
 * Rails integration is not hard
 * CLJS life cycle is outside of rails pipeline
 <!--slide-->
 
 # Development
-* Different optimization modes for dev/production
 
-* none for development
-* simple for server-side rendering
-* advanced for production
+* lein-figwheel
+* Different optimization modes for dev/production
 <!--slide-->
 
 # Development
+
 * Environment specific macro
 
 ```clojure
 (in-production
+  (def secure-key "key")
   (do-some-additional-call))
 ```
 
@@ -169,7 +172,7 @@ window._gaq = function(arg) {};
 
 # Debugging
 
-* trace
+* trace (like Debug.Trace in Haskell)
 
 ```clojure
 (defn trace [something]
@@ -296,4 +299,4 @@ should become (using cursors)
 
 ##### [gonzih.me](http://gonzih.me)
 ##### [github.com/Gonzih](github.com/Gonzih)
-#### [@Gonzih](twitter.com/Gonzih)
+##### [@Gonzih](twitter.com/Gonzih)
