@@ -40,7 +40,9 @@
 # Learning curve
 
 * 4.5 Scala engineers learned clojure script in one day
+* Initial introduction was done in the form of workshop
 * In a few week people were writing production code without asking for help
+### ![](img/flappy-demo.jpg)
 
 <!--slide-->
 
