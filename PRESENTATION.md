@@ -29,9 +29,17 @@ Seam + Query -> Rails + Knockout -> Rails + Angular -> Rails + cljs + Reagent
 
 # Stack origins
 
-### ![](img/old-screenshot.png)
+## Seam + JQuery
 
-### ![](img/new-screenshot.png)
+## ![](img/old-screenshot.png)
+
+<!--slide-->
+
+# Stack origins
+
+## Rails + ClojureScript + Reagent
+
+## ![](img/new-screenshot.png)
 
 
 <!--slide-->

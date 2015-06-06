@@ -1,3 +1,8 @@
 h1, h2, h3, h4, h5 {
         text-align: center;
 }
+
+.slide-4 img, .slide-5 img {
+        max-width: 45rem;
+        padding-top: 0;
+}
