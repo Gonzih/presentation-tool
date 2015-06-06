@@ -23,13 +23,16 @@
 
 # Stack origins
 
-blocks and etc
+Seam + Query -> Rails + Knockout -> Rails + Angular -> Rails + cljs + Reagent
 
 <!--slide-->
 
 # Stack origins
 
-pic of old page vs new
+### ![](img/old-screenshot.png)
+
+### ![](img/new-screenshot.png)
+
 
 <!--slide-->
 
