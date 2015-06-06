@@ -105,9 +105,15 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 
 # Isomorphic ClojureScript
 
+* Things you need to remember:
+  * Move all browser specific code (event listeners initialization) in to react life cycle methods
+  * Run go blocks from life cycle method or mock setInterval for v8 execution
+
+
 * Server side rendering via V8 in ruby
   * You want to show something to the user fast
   * You also probably want to be indexed by google
+
 
 ```ruby
 cxt = V8::Context.new
@@ -211,6 +217,8 @@ window._gaq = function(arg) {};
 <!--slide-->
 
 # Final thoughts
+
+### TODO
 
 <!--slide-->
 
