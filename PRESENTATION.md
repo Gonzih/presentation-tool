@@ -62,6 +62,15 @@ Seam + Query -> Rails + Knockout -> Rails + Angular -> Rails + cljs + Reagent
 
 <!--slide-->
 
+# Why Reagent and not Om?
+
+* Distributed state
+* No need to use core.async so much for the inter-component communications, just use shared state
+* Similar level of flexibility
+* Simplicity in theory should speedup learning process
+
+<!--slide-->
+
 # Where are we so far?
 
 * 5k cljs LOC on top of 5k LOC rails app
@@ -84,9 +93,7 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 * In one week people were writing production code without asking for help (with Angular this time was about one month)
 * Just building UI without a hassle :)
 
-### ![](img/flappy-demo.jpg)
-
-# Clojure is easy
+## ![](img/flappy-demo.jpg)
 
 > > There are no concepts, only parenthesis
 
@@ -94,15 +101,7 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 
 <!--slide-->
 
-# Why Reagent and not Om?
-
-* Distributed state
-* No need to use core.async so much for the inter-component communications, just use shared state
-* Similar level of flexibility
-
-<!--slide-->
-
-# Where are we so far?
+# Isomorphic ClojureScript
 
 * Server side rendering via V8 in ruby
   * You want to show something to the user fast
@@ -111,10 +110,10 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 ```ruby
 cxt = V8::Context.new
 # react expects couple of vars to be defined
-cxt.eval(setup_js)
-cxt.eval(read_file)
-cxt.eval(init_data)
-cxt.eval(render_to_string)
+cxt.eval(setup_js) # setup global vars for react
+cxt.eval(File.open("/path-to-assets/server-side.js").read)
+cxt.eval(init_state_script) # init your state
+cxt.eval("vd.core.details_page.render_to_string()")
 ```
 
 Which is:
