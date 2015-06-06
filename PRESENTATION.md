@@ -93,7 +93,6 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 * 4.5 Scala engineers learned clojure script in one day
 * Initial introduction was done in the form of workshop
 * In one week people were writing production code without asking for help (with Angular this time was about one month)
-* Just building UI without a hassle :)
 
 ## ![](img/flappy-demo.jpg)
 
