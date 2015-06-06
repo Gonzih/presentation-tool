@@ -35,27 +35,21 @@ pic of old page vs new
 
 # Why did we decide to migrate?
 
-### "Legacy" angular code without motivated maintainer
+## "Legacy" angular code without motivated maintainer
 
 ### ![](img/angular-logo.jpg)
 
 <!--slide-->
 
-# Why did we decide to migrate?
-
-### We like ideas and simplicity of React.js
-
-### ![](img/react-logo.png)
-
-<!--slide-->
-
 # Why ClojureScript?
 
-* React feels limited by JavaScript
-* Better language semantically
-* Better language syntactically
+## We like ideas and simplicity of React.js
 
-### ![](img/cljs-logo.png)
+## React feels limited by JavaScript
+
+### ![](img/react-logo.png) ![](img/cljs-logo.png)
+
+
 
 <!--slide-->
 
@@ -92,8 +86,9 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 <!--slide-->
 
 # Why Reagent and not Om?
+
 * Distributed state
-* Beauty in simplicity
+* No need to use core.async so much for the inter-component communications, just use shared state
 * Similar level of flexibility
 
 <!--slide-->
@@ -106,6 +101,7 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 
 ```ruby
 cxt = V8::Context.new
+# react expects couple of vars to be defined
 cxt.eval(setup_js)
 cxt.eval(read_file)
 cxt.eval(init_data)
@@ -120,16 +116,23 @@ Which is:
 
 # Development
 
-* vim + fireplace.vim/tmux
-* Intellij with clojure plugin
+* vim + paredit + fireplace.vim/tmux
+  * you don't really need fireplace or repl to work with clojurescript thanks to figwheel
+* Intellij with clojure plugin (LaClojure)
+
+
+* lein-figwheel
+* Different optimization modes for dev/production
+  * no optimization for figwheel
+  * advanced optimization mode for production
+  * simple optimization mode for server side rendering (v8 exceptions are not so informative)
+
 
 * Rails integration is not hard
 * CLJS life cycle is outside of rails pipeline
 
-* lein-figwheel
-* Different optimization modes for dev/production
 
-* Environment specific macro
+* Environment specific macro due to RAILS_ENV and friends
 
 ```clojure
 (in-production
@@ -142,11 +145,14 @@ Which is:
 # Advanced optimization mode
 
 * Advanced compilation is not so scary once you understand what is going on underneath
-* Writing extern files is easy
+* Writing extern files looks like this:
+
 ```javascript
 var window = {};
 window._gaq = function(arg) {};
 ```
+
+* Extern file will guarantee that closure compiler will not rename those calls (helpful when you use external JS libraries)
 
 <!--slide-->
 
