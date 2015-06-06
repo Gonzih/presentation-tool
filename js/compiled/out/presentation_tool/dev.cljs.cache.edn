@@ -1,2 +1,2 @@
-;; Analyzed by ClojureScript 0.0-3153
-{:cljs.analyzer/constants {:order [:on-jsload], :seen #{:on-jsload}}, :imports nil, :requires {fw figwheel.client, figwheel.client figwheel.client, presentation-tool.core presentation-tool.core}, :uses nil, :require-macros nil, :use-macros nil, :excludes #{}, :doc nil, :name presentation-tool.dev}
+;; Analyzed by ClojureScript 0.0-3308
+{:name presentation-tool.dev, :doc nil, :excludes #{}, :use-macros nil, :require-macros nil, :uses nil, :requires {presentation-tool.core presentation-tool.core, fw figwheel.client, figwheel.client figwheel.client}, :imports nil, :cljs.analyzer/constants {:seen #{:on-jsload}, :order [:on-jsload]}}

@@ -3,7 +3,7 @@
 html, body {
         padding:1em;
         margin:auto;
-        max-width:42em;
+        max-width:60em;
         background:#fefefe;
 	}
 body {
@@ -140,4 +140,3 @@ article {
 	padding: 0 10px;
 	}
 } /* @iPhone */
-
