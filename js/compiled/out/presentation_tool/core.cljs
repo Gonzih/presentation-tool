@@ -18,7 +18,7 @@
 (defn slide-component [i html]
   (when (= @current-slide i)
     ^{:key (hash html)}
-    [:div {:class (str "slide-" i)
+    [:div {:class (str "slide-" (inc i))
            :dangerouslySetInnerHTML {:__html html}}]))
 
 (def root-component
