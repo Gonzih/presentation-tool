@@ -18,8 +18,8 @@
 (defn slide-component [i html]
   (when (= @current-slide i)
     ^{:key (hash html)}
-    [:div {:dangerouslySetInnerHTML
-           {:__html html}}]))
+    [:div {:class (str "slide-" i)
+           :dangerouslySetInnerHTML {:__html html}}]))
 
 (def root-component
   (with-meta
