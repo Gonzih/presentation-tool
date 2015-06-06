@@ -1,8 +1,9 @@
-## Max Gonzih
-
 # Reagent in production
 
-### ![](https://pbs.twimg.com/profile_images/541878856643129345/N61oVvg-_400x400.png)
+## ![](https://pbs.twimg.com/profile_images/541878856643129345/N61oVvg-_400x400.png)
+
+## Max Gonzih
+
 
 <!--slide-->
 
@@ -17,13 +18,14 @@
 ## Elmar Reizen B.V.
 
 ### ![](http://static.vakantiediscounter.nl/atomic/images/hero-circle-header.png)
-##### [vakantiediscounter.nl](http://www.vakantiediscounter.nl/)
+## [vakantiediscounter.nl](http://www.vakantiediscounter.nl/)
 
 <!--slide-->
 
 # Stack origins
 
-Seam + Query -> Rails + Knockout -> Rails + Angular -> Rails + cljs + Reagent
+#### Seam + Query -> Rails + Knockout -> Rails + Angular -> Rails + cljs + Reagent
+#### picture here
 
 <!--slide-->
 
