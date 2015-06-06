@@ -58,9 +58,7 @@ Seam + Query -> Rails + Knockout -> Rails + Angular -> Rails + cljs + Reagent
 
 ## React feels limited by JavaScript
 
-### ![](img/react-logo.png) ![](img/cljs-logo.png)
-
-
+### ![](img/cljs-logo.png) ![](img/react-logo-min.png)
 
 <!--slide-->
 
