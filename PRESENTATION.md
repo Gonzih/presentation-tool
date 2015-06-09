@@ -70,20 +70,7 @@
 * Similar level of flexibility
 * Simplicity in theory should speedup learning process
 
-<!--slide-->
-
-# Where are we so far?
-
-* 5k cljs LOC on top of 5k LOC rails app
-
-```bash
-wc -l {src,test}/**/*.clj? | tail -n 1
-> 5185 total
-
-wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
-> 5529 total
-```
-
+## ![](img/reagent-logo.png)
 
 <!--slide-->
 
@@ -214,9 +201,26 @@ window._gaq = function(arg) {};
 
 <!--slide-->
 
+# Where are we so far?
+
+* 5k cljs LOC on top of 5k LOC rails app
+
+```bash
+wc -l {src,test}/**/*.clj? | tail -n 1
+> 5185 total
+
+wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
+> 5529 total
+```
+
+<!--slide-->
+
 # Final thoughts
 
-### Just integrate it!
+* Be brave
+* Learning curve is really fast
+* Facing real world challenges is fun
+* Happy team is a great team
 
 <!--slide-->
 
