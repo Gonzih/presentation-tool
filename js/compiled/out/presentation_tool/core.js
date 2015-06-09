@@ -138,6 +138,4 @@ return null;
 });
 presentation_tool.core.bind_keydown.call(null);
 
-//# sourceMappingURL=core.js.map?rel=1433863729521l(null);
-
-//# sourceMappingURL=core.js.map?rel=1433863729155
+//# sourceMappingURL=core.js.map?rel=1433863867014
