@@ -3,8 +3,16 @@ h1, h2, h3, h4, h5 {
         vertical-align: middle;
 }
 
-.slide-1 img {
-        border-radius: 60px;
+.slide-1 img{
+        height: 20rem;
+}
+
+.slide-2 img {
+        height: 10rem;
+}
+
+.slide-4 img {
+        height: 45rem;
 }
 
 .slide-5 img, .slide-6 img {
