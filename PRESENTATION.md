@@ -17,6 +17,8 @@
 
 # Stack overview
 
+## ![](img/stack-overview.jpg)
+
 <!--slide-->
 
 # Frontend stack evolution
