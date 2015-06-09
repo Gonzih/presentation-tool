@@ -17,13 +17,13 @@
 
 # Stack overview
 
-## ![](img/stack-overview.jpg)
+## ![](img/stack-overview.png)
 
 <!--slide-->
 
 # Frontend stack evolution
 
-## ![](img/stack-evolution.jpg)
+## ![](img/stack-evolution.png)
 
 <!--slide-->
 
