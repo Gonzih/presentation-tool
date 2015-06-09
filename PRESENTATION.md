@@ -216,7 +216,7 @@ window._gaq = function(arg) {};
 
 # Final thoughts
 
-### TODO
+### Just integrate it!
 
 <!--slide-->
 
