@@ -225,7 +225,6 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 * Simplicity is a great selling point when you are adopting new technology
 * Learning curve is really fast
 * Learning curve should be fun
-* Facing real world challenges is fun and to deal with them
 
 <!--slide-->
 
