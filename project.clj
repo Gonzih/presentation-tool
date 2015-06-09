@@ -31,6 +31,7 @@
                          :cache-analysis true }}
              {:id "min"
               :source-paths ["src"]
+              :externs ["externs/highlight.js"]
               :compiler {:output-to "resources/public/js/compiled/presentation_tool.js"
                          :main presentation-tool.core
                          :optimizations :advanced
