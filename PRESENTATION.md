@@ -182,7 +182,7 @@ window._gaq = function(arg) {};
 
 * In-browser profiling tools are not so helpful
 
-![](img/chrome-profiling.png)
+# ![](img/chrome-profiling.png)
 
 <!--slide-->
 
@@ -191,7 +191,7 @@ window._gaq = function(arg) {};
 * React.addons.Perf is your friend
 * Try to reduce wasted time
 
-![](img/wasted-perf.png)
+# ![](img/wasted-perf.png)
 
 <!--slide-->
 
@@ -199,7 +199,7 @@ window._gaq = function(arg) {};
 
 * Remote debugging on android is your friend
 
-![](https://developer.chrome.com/devtools/docs/remote-debugging/remote-debug-overview.jpg)
+# ![](https://developer.chrome.com/devtools/docs/remote-debugging/remote-debug-overview.jpg)
 
 <!--slide-->
 
@@ -207,7 +207,7 @@ window._gaq = function(arg) {};
 
 * lein-figwheel + port forwarding = ❤
 
-![](img/remote-debugger.png)
+# ![](img/remote-debugger.png)
 
 * Use perf tools on real device
 * Slower devices will help to understand your application better
@@ -224,7 +224,7 @@ window._gaq = function(arg) {};
 
 ## Any questions?
 
+##### ![](img/bunny-sleep.gif)
+
 ##### [gonzih.me](http://gonzih.me)
-##### [github.com/Gonzih](http://github.com/Gonzih)
-##### [@Gonzih](http://twitter.com/Gonzih)
 ##### [github.com/Gonzih/presentation-tool](https://github.com/Gonzih/presentation-tool)
