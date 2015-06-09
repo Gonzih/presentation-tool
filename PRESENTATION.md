@@ -179,6 +179,10 @@ window._gaq = function(arg) {};
 
 # ![](img/wasted-perf.png)
 
+* By:
+  * Using memoize
+  * Thinking carefully about your state
+
 <!--slide-->
 
 # Mobile profiling
