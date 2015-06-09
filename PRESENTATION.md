@@ -1,17 +1,10 @@
 # Reagent in production
 
-## ![](https://pbs.twimg.com/profile_images/541878856643129345/N61oVvg-_400x400.png)
+## ![](img/reagent-logo.png)
 
 ## Max Gonzih
-
-
-<!--slide-->
-
-## Max Gonzih
-
 ## [gonzih.me](http://gonzih.me)
-## [github.com/Gonzih](http://github.com/Gonzih)
-## [@Gonzih](http://twitter.com/Gonzih)
+
 
 <!--slide-->
 
@@ -22,22 +15,25 @@
 
 <!--slide-->
 
-# Stack origins
-
-#### Seam + Query -> Rails + Knockout -> Rails + Angular -> Rails + cljs + Reagent
-#### picture here
+# Stack overview
 
 <!--slide-->
 
-# Stack origins
+# Frontend stack evolution
 
-## Seam + JQuery
+## ![](img/stack-evolution.jpg)
+
+<!--slide-->
+
+# Frontend stack evolution
+
+## Seam + jQuery
 
 ## ![](img/old-screenshot.png)
 
 <!--slide-->
 
-# Stack origins
+# Frontend stack evolution
 
 ## Rails + ClojureScript + Reagent
 
@@ -49,6 +45,7 @@
 # Why did we decide to migrate?
 
 ## "Legacy" angular code without motivated maintainer
+### we were afraid of big changes on frontend
 
 ### ![](img/angular-logo.jpg)
 
