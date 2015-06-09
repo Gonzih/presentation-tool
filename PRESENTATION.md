@@ -56,8 +56,7 @@
 # Why ClojureScript?
 
 ## We like ideas and simplicity of React.js
-
-## React feels limited by JavaScript
+### but React feels limited by JavaScript
 
 ### ![](img/cljs-logo.png) ![](img/react-logo-min.png)
 
@@ -66,9 +65,9 @@
 # Why Reagent and not Om?
 
 * Distributed state
-* No need to use core.async so much for the inter-component communications, just use shared state
+* No need for inter-component communications
 * Similar level of flexibility
-* Simplicity in theory should speedup learning process
+* Simplicity will speedup learning process
 
 ## ![](img/reagent-logo.png)
 
@@ -215,12 +214,14 @@ wc -l {app,lib,spec,test}/**/*.rb | tail -n 1
 
 <!--slide-->
 
-# Final thoughts
+# Path towards happy team
 
-* Be brave
+* ClojureScript is easy
+* Reagent is simple
+* Simplicity is a great selling point when you are adopting new technology
 * Learning curve is really fast
-* Facing real world challenges is fun
-* Happy team is a great team
+* Learning curve should be fun
+* Facing real world challenges is fun and to deal with them
 
 <!--slide-->
 
