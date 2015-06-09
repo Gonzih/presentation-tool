@@ -1,2 +1,2 @@
 var hljs = {}
-hljs.highlightBlock = function(n) {};
+hljs.highlightBlock = function(n){};

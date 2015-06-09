@@ -1,6 +1,6 @@
 default:
 	git push
-	lein do clean, cljsbuild once min
+	lein do clean, cljsbuild once dev
 	cp -rf resources/public/* deploy/
 	cd deploy/ && \
 	git add . && \
