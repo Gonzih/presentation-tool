@@ -8,7 +8,7 @@
 
 <!--slide-->
 
-## Elmar Reizen B.V.
+# Elmar Reizen B.V.
 
 ### ![](http://static.vakantiediscounter.nl/atomic/images/hero-circle-header.png)
 ## [vakantiediscounter.nl](http://www.vakantiediscounter.nl/)
@@ -45,7 +45,7 @@
 # Why did we decide to migrate?
 
 ## "Legacy" angular code without motivated maintainer
-### we were afraid of big changes on frontend
+### we were afraid of big changes on our frontend
 
 ### ![](img/angular-logo.jpg)
 
