@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Gonzih/presentation-tool.svg?branch=master)](https://travis-ci.org/Gonzih/presentation-tool)
+
 How to run it:
 
 ```
