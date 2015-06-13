@@ -16,11 +16,9 @@
 
 (reset! presentations (read-presentations))
 
-(defn slide-component [i html]
-  (when (= @current-slide i)
-    ^{:key (hash html)}
-    [:div {:class (str "slide-" (inc i))
-           :dangerouslySetInnerHTML {:__html html}}]))
+(defn slide-component [html]
+  [:div {:class (str "slide-" (inc @current-slide))
+         :dangerouslySetInnerHTML {:__html html}}])
 
 (defn presentation-title-component [[talk-name talk-slides]]
   ^{:key talk-name}
@@ -37,7 +35,7 @@
   (with-meta
     (fn []
       [:div
-       (doall (map-indexed slide-component @slides))
+       [slide-component (get @slides @current-slide)]
        [:p
         {:style {:position :absolute
                  :left 0
