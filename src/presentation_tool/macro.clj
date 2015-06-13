@@ -16,11 +16,10 @@
           (split-slides
             (slurp (str talks-dir filename)))))])
 
-; (defmacro read-presentations []
+(defmacro read-presentations []
   (let [directory (io/file talks-dir)
         files (file-seq directory)
         presentation-names (->> files
                                 (map #(.getName %))
                                 (filter #(re-find #".*\.md" %)))]
-    (into {} (map file-to-slides presentation-names)))
-  ; )
+    (into {} (map file-to-slides presentation-names))))
