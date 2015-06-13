@@ -1,3 +1,11 @@
+How to run it:
+
+```
+lein figwheel
+```
+
+And go to [http://localhost:3449/index.html](http://localhost:3449/index.html)
+
 Autorecompile on md file changes
 
 ```viml
