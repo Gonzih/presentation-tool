@@ -6,18 +6,21 @@
 (defn split-slides [s]
   (clojure.string/split s #"<!--slide-->"))
 
+(def talks-dir "talks/")
+
 (defn file-to-slides [filename]
   [filename
    (into
      []
      (map md-to-html-string
           (split-slides
-            (slurp filename))))])
+            (slurp (str talks-dir filename)))))])
 
-(defmacro read-presentations []
-  (let [directory (io/file ".")
+; (defmacro read-presentations []
+  (let [directory (io/file talks-dir)
         files (file-seq directory)
         presentation-names (->> files
                                 (map #(.getName %))
-                                (filter #(re-find #".*-talk\.md" %)))]
-    (into {} (map file-to-slides presentation-names))))
+                                (filter #(re-find #".*\.md" %)))]
+    (into {} (map file-to-slides presentation-names)))
+  ; )
