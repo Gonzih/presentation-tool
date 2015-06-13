@@ -1,5 +1,5 @@
 (ns ^:figwheel-always presentation-tool.core
-  (:require-macros [presentation-tool.macro :refer [read-presentation]])
+  (:require-macros [presentation-tool.macro :refer [read-presentations]])
   (:require [reagent.core :as reagent :refer [atom]]))
 
 (enable-console-print!)
@@ -11,9 +11,10 @@
         (js/hljs.highlightBlock n))))
 
 (defonce slides (atom []))
+(defonce presentations (atom {}))
 (defonce current-slide (atom 0))
 
-(reset! slides (read-presentation))
+(reset! presentations (read-presentations))
 
 (defn slide-component [i html]
   (when (= @current-slide i)
@@ -21,7 +22,18 @@
     [:div {:class (str "slide-" (inc i))
            :dangerouslySetInnerHTML {:__html html}}]))
 
-(def root-component
+(defn presentation-title-component [[talk-name talk-slides]]
+  ^{:key talk-name}
+  [:a
+   {:on-click #(reset! slides talk-slides)}
+   [:h3 talk-name]])
+
+(defn select-presentation-component []
+  [:div
+   [:h1 "Select presentation"]
+   (map presentation-title-component @presentations)])
+
+(def presentation-component
   (with-meta
     (fn []
       [:div
@@ -33,6 +45,12 @@
         (str (inc @current-slide) " / " (count @slides))]])
     {:component-did-update highlight-code
      :component-did-mount  highlight-code}))
+
+(defn root-component []
+  (-> @presentations keys prn)
+  (if (seq @slides)
+    [presentation-component]
+    [select-presentation-component]))
 
 (defn main []
   (reagent/render [root-component]
